@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+  body
+   nav {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    nav a {
+      float: right;
+      display: block;
+      color: #333;
+      text-align: center;
+      cursor: pointer;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      padding: 1px;
+      text-decoration: line-through;
+      color: black;
+    }
+
+    .show-nav {
+      max-height: 200px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        float: none;
+        width: 100%;
+      }
+    }
+    
+     #logo-container {
+      position: fixed;
+      top: 20px;
+      left: 20px; /* Change right to left */
+      cursor: pointer;
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    #logo {
+      display: inline-block;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 70px;
+      color: transparent;
+      background: linear-gradient(45deg, #FFD700, #FFA500); /* Golden yellowish gradient */
+      background-clip: text; /* Clip the background to text */
+      -webkit-background-clip: text; /* For Safari */
+      transition: transform 0.2s ease; /* Add a smooth transform animation */
+    }
+
+    #logo:hover {
+      transform: scale(1.1); /* Scale up on hover */
+    }
+    </style>
+    </head>
+    <body>
+    
+      <div id="logo-container">
+    <div id="logo">PB</div>
+  </div>
+  <nav id="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.classList.add('show-nav');
+      } else {
+        navbar.classList.remove('show-nav');
+      }
+    };
+  </script>
+  </body>
+  </html>
