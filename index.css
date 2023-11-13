@@ -13,10 +13,18 @@ body {
   background-color: #f2f2f2;
 }
 
+section {
+  margin: 1em;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 #logo-container {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 40px; /* Increased space from the top */
+  right: 40px; /* Increased space from the right */
   font-weight: bold;
   font-size: 24px;
   color: #333;
@@ -26,20 +34,22 @@ nav {
   position: fixed;
   display: flex;
   align-items: center;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 20px;
   background-color: transparent;
   overflow: hidden;
   transition: 0.5s;
+  z-index: 1000; /* Any high number will work */
+  /* Other styles */
 }
 
 nav a {
-  float: right;
+  
   display: block;
   color: #333;
   text-align: center;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 16px 18px;
   text-decoration: none;
 }
 
@@ -48,22 +58,34 @@ nav a:hover {
   padding: 1px;
   text-decoration: line-through;
   color: black;
+  transition: bottom 2s ease-in-out;
 }
 
 .show-nav {
   max-height: 200px;
 }
 
+/* Responsive styles (mobile) */
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
   nav a {
-    float: none;
-    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+
+  section {
+    margin: 0.5em;
   }
 }
 
-section {
-  margin: 1em;
-}
+
 
 #profile-picture {
   border-radius: 50%;
@@ -93,7 +115,7 @@ section {
 #image {
   position: absolute;
   top: 55%;
-  right: 20px;
+  right: 80px;
   width: 500px; /* Adjust the width as needed */
   height: 800px; /* Adjust the height as needed */
   transform: translate(0, -50%) translateY(0);
