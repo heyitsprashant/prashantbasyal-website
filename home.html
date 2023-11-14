@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>My Portfolio</title>
+
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="container.css">
+  
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+   
+  </style>  
+</head>
+<body>
+  <div id="splash-screen">
+    <!-- Include the contents of animate_splashscreen.html here -->
+  </div>
+
+  <script>
+    window.onload = function() {
+      document.getElementById('splash-screen').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }
+  </script>
+
+  <!-- The rest of your website's content goes here -->
+
+
+<div id="logo-container">
+    <div id="logo">PB</div>
+  </div>
+  <nav id="navbar">
+    <a href="#" >Home</a>
+    <a href="about.html" id="about" onclick="navigateToAbout()">About</a>
+    <div id="overlay"></div> 
+    <script src="navbar.js"></script>
+    <a href="works.html">Projects</a>
+    <a href="contacts.html">Contact</a>
+  </nav>
+  <button id="toggleBtn">Toggle Mode</button>
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.classList.add('show-nav');
+      } else {
+        navbar.classList.remove('show-nav');
+      }
+    };
+  </script>
+
+<div class="scrolling-circle"></div>
+
+<!-- Your content goes here -->
+<div class="content">
+  <h1>Your Website Content</h1>
+  <!-- Add more content as needed -->
+</div>
+
+ <script>
+        // Check for user preference or set a default value
+        const currentMode = localStorage.getItem('mode') || 'light';
+        document.body.classList.add(currentMode);
+
+        // Toggle mode function
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const newMode = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('mode', newMode);
+        }
+
+        // Event listener for the button
+        document.getElementById('toggleBtn').addEventListener('click', toggleMode);
+    </script>
+
+
+
+
+<script>
+  // JavaScript to move the circle upward while scrolling down
+  window.addEventListener('scroll', function() {
+    const scrollingCircle = document.querySelector('.scrolling-circle');
+    const scrollY = window.scrollY || window.pageYOffset;
+    scrollingCircle.style.transform = `translateX(-50%) translateY(${Math.min(-scrollY, 0)}px)`; /* Adjusted translateY */
+  });
+</script>
+
+  <div id="container">
+    <img id="image" src="prash1.jpg" alt="Portfolio Image">
+  </div>
+
+  <section>
+    <h2>Your Name</h2>
+    <p>Flutter Developer</p>
+  </section>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Description of Project 1.</p>
+    </div>
+    <div class="project-card">
+      <h3>Project 2</h3>
+      <p>Description of Project 2.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="half left">
+        <h3>Project 1</h3>
+      </div>
+      <div class="half right">
+        <p>Description of Project 1.</p>
+      </div>
+    </div>
+    
+    <button id="showMoreBtn" onclick="navigateToWorks()">More Projects</button>
+    <div id="overlay"></div>
+<script src="viewmore.js"></script>
+    <!-- Add more project cards as needed -->
+    
+  </section>
+
+  <footer>
+    <div id="motivation">
+        <p>Stay motivated and keep coding!</p>
+    </div>
+    <div id="contact-links">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <!-- GitHub -->
+        <a href="https://github.com/" target="_blank" class="github"><i class="fab fa-github"></i></a>
+        <!-- Add more contact links as needed -->
+    </div>
+</footer>
+
+
+
+    
+
+</body>
+</html>
