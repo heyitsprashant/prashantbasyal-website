@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="animate_splashscreen.css">
+  <link rel="stylesheet" href="index.css">
   <title>Loading Page</title>
 </head>
 <body>
@@ -16,8 +16,23 @@
   </div>
   <div class="content">
     <!-- Your website content goes here -->
-    <h1>Welcome to Your Website!</h1>
+    <h1 id="name">Prashant Basyal</h1>
+    <script>
+      window.onload = function() {
+        setTimeout(() => {
+          document.querySelector('.loading-container').style.display = 'none';
+      
+          const name = 'Prashant Basyal';
+          const scrambled = name.split('').sort(() => 0.5 - Math.random()).join('');
+          document.getElementById('name').textContent = scrambled;
+      
+          setTimeout(() => {
+            document.getElementById('name').textContent = name;
+          }, 900);
+        }, 900);
+      }
+      </script>
   </div>
-  <meta http-equiv="refresh" content="5;url=index.html">
+  <meta http-equiv="refresh" content="0.9;url=home.html">
 </body>
 </html>
