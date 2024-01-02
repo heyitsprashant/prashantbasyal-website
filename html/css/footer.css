@@ -1,0 +1,141 @@
+body {
+    margin: 0;  
+    padding: 0;
+}
+    footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Add this line */
+  box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
+
+}
+
+/* Styling for the motivation and contact-links divs */
+#motivation, #contact-links {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Styling for the contact links */
+#contact-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+/* Media query for devices with a maximum width of 768px (adjust as needed) */
+@media screen and (max-width: 768px) {
+  #contact-links {
+    flex-direction: column; /* Stack the contact links vertically on small screens */
+  }
+
+  #contact-links a {
+    margin: 10px 0; /* Add space between stacked contact links */
+  }
+}
+
+    #footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 60px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 3em;
+    }
+
+    #motivation {
+        font-size: 18px;
+        margin-bottom: 10px;
+        animation: animateText 3s infinite;
+    }
+
+    #contact-links a {
+        text-decoration: none;
+        margin: 0 20px; /* Increased spacing */
+        font-size: 30px; /* Increased font size */
+        transition: color 0.3s;
+    }
+
+    #contact-links a:hover {
+        color: #00ffcc; /* Change to your desired glow color */
+    }
+
+    /* Instagram color animation */
+    #contact-links a.instagram {
+        color: #405de6; /* Instagram blue color */
+        animation: animateInstagram 2s infinite alternate;
+    }
+
+    /* LinkedIn color animation */
+    #contact-links a.linkedin {
+        color: #0077b5; /* LinkedIn blue color */
+        animation: animateLinkedIn 2s infinite alternate;
+    }
+
+    /* GitHub color animation */
+    #contact-links a.github {
+        color: #171515; /* GitHub black color */
+        animation: animateGitHub 2s infinite alternate;
+    }
+
+    @keyframes animateText {
+        0%, 100% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes animateInstagram {
+        0% {
+            color: #405de6;
+        }
+        50% {
+            color: #fb3958; /* Instagram pink color */
+        }
+        100% {
+            color: #405de6;
+        }
+    }
+
+    @keyframes animateLinkedIn {
+        0% {
+            color: #0077b5;
+        }
+        50% {
+            color: #ff7a00; /* LinkedIn orange color */
+        }
+        100% {
+            color: #0077b5;
+        }
+    }
+
+    @keyframes animateGitHub {
+        0% {
+            color: #171515;
+        }
+        50% {
+            color: #f0f0f0; /* GitHub white color */
+        }
+        100% {
+            color: #171515;
+        }
+    }
+
+    @media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}

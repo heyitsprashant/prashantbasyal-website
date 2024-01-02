@@ -1,0 +1,525 @@
+
+body {
+  transition: background-color 0.5s;
+}
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f2f2f2;
+}
+
+section {
+margin: 1em;
+}
+
+body {
+overflow-x: hidden;
+}
+
+#logo-container {
+position: fixed;
+top: 40px; /* Increased space from the top */
+right: 40px; /* Increased space from the right */
+font-weight: bold;
+font-size: 24px;
+color: #333;
+}
+
+nav {
+position: fixed;
+display: flex;
+align-items: center;
+top: 10px;
+right: 20px;
+background-color: transparent;
+overflow: hidden;
+transition: 0.5s;
+z-index: 1000; /* Any high number will work */
+/* Other styles */
+}
+
+nav a {
+
+display: block;
+color: #333;
+text-align: center;
+cursor: pointer;
+padding: 16px 18px;
+text-decoration: none;
+}
+
+nav a:hover {
+background-color: #ddd;
+padding: 1px;
+text-decoration: line-through;
+color: black;
+transition: bottom 2s ease-in-out;
+}
+
+.show-nav {
+max-height: 200px;
+}
+
+@media (max-width: 600px) {
+.container {
+flex-direction: column;
+}
+}
+
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+img, video, .container {
+max-width: 100%;
+}
+
+/* Show the hamburger menu */
+#menuToggle {
+display: block;
+}
+
+@media (min-width: 1025px) {
+/* Show the regular navigation bar */
+nav a {
+display: block;
+}
+
+/* Hide the hamburger menu */
+#menuToggle {
+display: none;
+}
+}
+
+
+#profile-picture {
+border-radius: 50%;
+width: 160px;
+height: 160px;
+margin-bottom: 16px;
+}
+
+.project-card {
+border: 1px solid #ccc;
+padding: 10px;
+margin-bottom: 20px;
+transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+transform: scale(1.05);
+}
+
+#container {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+#image {
+position: absolute;
+top: 55%;
+right: 80px;
+width: 500px; /* Adjust the width as needed */
+height: 800px; /* Adjust the height as needed */
+transform: translate(0, -50%) translateY(0);
+transition: transform 0.5s steps(5);
+
+animation: hoverUpDown 0.75s infinite alternate;
+box-sizing: border-box;
+}
+
+@keyframes hoverUpDown {
+from {
+transform: translate(0, -50%) translateY(0);
+}
+to {
+transform: translate(0, -50%) translateY(-50px);
+}
+}
+body {
+margin: 0;
+padding: 0;
+}
+
+#logo-container {
+position: fixed;
+top: 20px;
+left: 20px; /* Change right to left */
+cursor: pointer;
+z-index: 1000; /* Ensure it's above other elements */
+}
+
+#logo {
+display: inline-block;
+font-family: 'Arial', sans-serif;
+font-weight: bold;
+font-size: 70px;
+color: transparent;
+background: linear-gradient(45deg, #FFD700, #FFA500); /* Golden yellowish gradient */
+background-clip: text; /* Clip the background to text */
+-webkit-background-clip: text; /* For Safari */
+transition: transform 0.2s ease; /* Add a smooth transform animation */
+}
+
+#logo-container {
+position: fixed;
+top: 20px;
+left: 20px; /* Change right to left */
+cursor: pointer;
+z-index: 1000; /* Ensure it's above other elements */
+}
+
+#logo {
+display: inline-block;
+font-family: 'Arial', sans-serif;
+font-weight: bold;
+font-size: 70px;
+color: transparent;
+background: linear-gradient(45deg, #FFD700, #FFA500); /* Golden yellowish gradient */
+background-clip: text; /* Clip the background to text */
+-webkit-background-clip: text; /* For Safari */
+transition: transform 0.2s ease; /* Add a smooth transform animation */
+}
+
+#logo:hover {
+transform: scale(1.1); /* Scale up on hover */
+}
+/* Circle styling */
+.scrolling-circle {
+position: fixed;
+width: 500px; /* Adjusted size to be more than 5 times bigger */
+height: 500px; /* Adjusted size to be more than 5 times bigger */
+background-color: #ffffff; /* White color */
+border-radius: 50%;
+top: 10%; /* Adjusted top position to be in the upper quarter */
+left: 50%;
+transform: translateX(-50%);
+z-index: -1; /* Behind other content */
+transition: transform 0.3s ease-out; /* Added a transition for smooth movement */
+}
+
+/* Content styling */
+.content {
+padding: 20px;
+margin-top: 100px; /* Adjusted margin-top for visibility */
+}
+
+/* Styles for desktop */
+.container {
+width: 80%;
+margin: 0 auto;
+}
+
+/* Styles for tablet */
+@media (max-width: 768px) {
+.container {
+width: 90%;
+}
+}
+
+/* Styles for mobile */
+@media (max-width: 480px) {
+.container {
+width: 100%;
+}
+}
+
+
+
+/*768px */
+@media (max-width: 768px) {
+#logo-container {
+top: 10px;
+left: 10px;
+}
+
+#logo {
+font-size: 50px;
+}
+
+.scrolling-circle {
+width: 300px;
+height: 300px;
+}
+
+.content {
+margin-top: 50px;
+}
+
+#container {
+height: 50vh;
+}
+
+#image {
+top: 50%;
+right: 40px;
+width: 250px;
+height: 400px;
+}
+
+.project-card {
+margin-bottom: 10px;
+}
+
+footer {
+padding: 30px;
+font-size: 2em;
+}
+
+#contact-links a {
+margin: 0 10px;
+font-size: 20px;
+}
+}
+
+
+/*480px */
+
+@media (max-width: 480px) {
+#logo-container {
+top: 5px;
+left: 5px;
+}
+
+#logo {
+font-size: 40px;
+}
+
+.scrolling-circle {
+width: 200px;
+height: 200px;
+}
+
+.content {
+margin-top: 30px;
+}
+
+#container {
+height: 40vh;
+}
+
+#image {
+top: 50%;
+right: 20px;
+width: 200px;
+height: 300px;
+}
+
+.project-card {
+margin-bottom: 5px;
+}
+
+footer {
+padding: 20px;
+font-size: 1.5em;
+}
+
+#contact-links a {
+margin: 0 5px;
+font-size: 16px;
+}
+}
+
+
+/* 320px */
+
+
+
+/*1025px */
+@media (min-width: 1025px) {
+#logo-container {
+top: 15px;
+left: 15px;
+}
+
+#logo {
+font-size: 60px;
+}
+
+.scrolling-circle {
+width: 350px;
+height: 350px;
+}
+
+.content {
+margin-top: 60px;
+}
+
+#container {
+height: 60vh;
+}
+
+#image {
+top: 50%;
+right: 50px;
+width: 300px;
+height: 500px;
+}
+
+.project-card {
+margin-bottom: 15px;
+}
+
+footer {
+padding: 40px;
+font-size: 2.5em;
+}
+
+#contact-links a {
+margin: 0 15px;
+font-size: 24px;
+}
+} 
+
+
+
+/*iphone 14/13*/
+@media (max-width: 428px) {
+#logo-container {
+top: 10px;
+left: 10px;
+}
+
+.content {
+margin-top: 20px;
+}
+
+#container {
+height: 30vh;
+}
+
+#image {
+top: 50%;
+right: 10px;
+width: 150px;
+height: 250px;
+}
+
+.project-card {
+margin-bottom: 3px;
+}
+
+footer {
+padding: 15px;
+font-size: 1.2em;
+}
+
+#contact-links a {
+margin: 0 3px;
+font-size: 14px;
+}
+}
+
+
+/*footer*/
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 60px;
+width: 100%;
+font-size: 3em;
+}
+
+@media (max-width: 768px) {
+footer {
+padding: 30px;
+font-size: 2em;
+}
+}
+
+@media (max-width: 480px) {
+footer {
+padding: 15px;
+font-size: 1.2em;
+}
+}
+
+#motivation {
+    font-size: 18px;
+    margin-bottom: 10px;
+    animation: animateText 3s infinite;
+}
+
+#contact-links a {
+    text-decoration: none;
+    margin: 0 20px; /* Increased spacing */
+    font-size: 30px; /* Increased font size */
+    transition: color 0.3s;
+}
+
+#contact-links a:hover {
+    color: #00ffcc; /* Change to your desired glow color */
+}
+
+/* Instagram color animation */
+#contact-links a.instagram {
+    color: #405de6; /* Instagram blue color */
+    animation: animateInstagram 2s infinite alternate;
+}
+
+/* LinkedIn color animation */
+#contact-links a.linkedin {
+    color: #0077b5; /* LinkedIn blue color */
+    animation: animateLinkedIn 2s infinite alternate;
+}
+
+/* GitHub color animation */
+#contact-links a.github {
+    color: #171515; /* GitHub black color */
+    animation: animateGitHub 2s infinite alternate;
+}
+
+@keyframes animateText {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes animateInstagram {
+    0% {
+        color: #405de6;
+    }
+    50% {
+        color: #fb3958; /* Instagram pink color */
+    }
+    100% {
+        color: #405de6;
+    }
+}
+
+@keyframes animateLinkedIn {
+    0% {
+        color: #0077b5;
+    }
+    50% {
+        color: #ff7a00; /* LinkedIn orange color */
+    }
+    100% {
+        color: #0077b5;
+    }
+}
+
+@keyframes animateGitHub {
+    0% {
+        color: #171515;
+    }
+    50% {
+        color: #f0f0f0; /* GitHub white color */
+    }
+    100% {
+        color: #171515;
+    }
+}

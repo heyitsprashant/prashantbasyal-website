@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 70%; /* Decrease this value to reduce the container size */
+    height: 5%;
+  }
+
+  .info-box {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: calc(30% - 20px);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .info-box:hover {
+    transform: scale(1.05);
+  }
+
+  .info-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .info-box h2 {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
+
+  .info-box p {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .read-more-btn {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .read-more-btn:hover {
+    color: #000;
+  }
+
+  /* Styles for overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .overlay-content {
+    background: #fff;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }

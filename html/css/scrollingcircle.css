@@ -1,0 +1,45 @@
+.scrolling-circle {
+    position: fixed;
+    width: 500px; /* Adjusted size to be more than 5 times bigger */
+    height: 500px; /* Adjusted size to be more than 5 times bigger */
+    background-color: #ffffff; /* White color */
+    border-radius: 50%;
+    top: 10%; /* Adjusted top position to be in the upper quarter */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* Behind other content */
+    transition: transform 0.3s ease-out; /* Added a transition for smooth movement */
+    }
+
+@media (max-width: 768px) {
+       
+  .scrolling-circle {
+            width: 300px;
+            height: 300px;
+            }
+        }
+ @media (max-width: 480px) { 
+#logo-container {
+top: 5px;
+left: 5px;
+                }
+            
+.scrolling-circle {
+  width: 200px;
+                    height: 200px;
+                    }
+                }
+                
+
+                
+                    @media (min-width: 1025px) {
+                        #logo-container {
+                        top: 15px;
+                        left: 15px;
+                        }
+
+                        .scrolling-circle {
+                            width: 350px;
+                            height: 350px;
+                            }
+                        }                        

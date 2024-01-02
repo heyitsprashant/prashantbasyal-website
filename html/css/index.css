@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Set your desired background color */
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3498db; /* Set your desired circle color */
+  margin: 0 10px;
+  animation: dropAnimation 2s ease-in-out infinite;
+}
+
+.loading-circle:nth-child(2) {
+  background-color: #2ecc71; /* Set your desired circle color */
+  animation-delay: 0.3s;
+}
+
+.loading-circle:nth-child(3) {
+  background-color: #f39c12; /* Set your desired circle color */
+  animation-delay: 0.6s;
+}
+
+.loading-circle:nth-child(4) {
+  background-color: #9b59b6; /* Set your desired circle color */
+  animation-delay: 0.9s;
+}
+
+.loading-circle:nth-child(5) {
+  background-color: #e67e22; /* Set your desired circle color */
+  animation-delay: 0.12s;
+}
+
+@keyframes dropAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-60px);
+  }
+}
+.content {
+  display: none;
+}
+
+#name {
+  color: gold;
+  font-size: 2em;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

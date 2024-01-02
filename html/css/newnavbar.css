@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: auto; /* Added overflow hidden to hide glitter overflow */
+    transition: background-color 0.5s ease; /* Added transition for background color change */
+    height: 100%; /* Set initial height */
+  }
+
+  body.dark-mode {
+background-color: #333;
+color: #fff;
+}
+  nav {
+    background-color: transparent; /* Transparent black background */
+    color: rgb(15, 15, 15);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    margin: 0 10px; /* Reduced margin for links */
+    position: relative;
+    transition: 0.3s; /* Added transition for smooth effect */
+  }
+
+  nav a:hover {
+    text-decoration: none;
+  }
+
+  nav a:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: rgb(8, 8, 8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  nav a:hover {
+    opacity: 0.7; /* Added fade effect */
+    transform: scale(1.05); /* Added slight scale effect */
+    
+  }
+
+  .selected {
+    position: relative;
+    z-index: 1;
+  }
+
+  .selected::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #800000; /* Maroon red color */
+    box-sizing: border-box;
+    animation: glitter 1s linear infinite; /* Added glitter animation */
+  }
+
+  #logo {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif; /* Changed font to Times New Roman */
+    cursor: pointer; /* Added cursor pointer for clickable effect */
+  }
+
+  #image {
+position: absolute;
+top: 55%;
+right: 80px;
+width: 500px; /* Adjust the width as needed */
+height: 800px; /* Adjust the height as needed */
+transform: translate(0, -50%) translateY(0);
+transition: transform 0.5s steps(5);
+
+animation: hoverUpDown 0.75s infinite alternate;
+box-sizing: border-box;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Check if this is causing the issue */
+}
+
+#navbar a {
+text-decoration: none;
+color: #000;
+margin-bottom: 10px;
+}
+
+  #hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: -250px; /* Adjusted margin for hamburger */
+  }
+
+  #hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(8, 8, 8);
+    margin: 5px 0;
+  }
+
+  #dark-mode-toggle {
+    cursor: pointer;
+    margin-left: 10px; /* Increased margin for Dark Mode */
+  
+  
+}
+
+#links {
+display: flex;
+flex-direction: column;
+}
+
+#links a {
+text-decoration: none;
+color: #000;
+margin-bottom: 10px;  transition: color 0.3s ease; /* Add this line */
+}
+
+#links a:hover {
+color: #f00; /* Change this to the color you want when hovering */
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: left 2s ease-in-out;
+  z-index: 1000;
+}
+
+#overlay.move-right {
+  left: 0;
+}
+
+
+@media (min-width: 768px) {
+#links {
+  flex-direction: row;
+  justify-content: space-around;
+}
+}
+
+  @media only screen and (max-width: 600px) {
+    #links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(51, 51, 51, 0.7); /* Transparent black background */
+      z-index: 1;
+    }
+
+    #links.show {
+      display: flex;
+    }
+
+    #hamburger {
+      display: flex;
+    }
+  }
+
+  @keyframes glitter {
+    0% {
+      border-color: #800000; /* Maroon red color */
+      transform: translateX(0);
+    }
+    50% {
+      border-color: #ff5252;
+      transform: translateX(10px);
+    }
+    100% {
+      border-color: #800000; /* Maroon red color */
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+  body {
+margin: 0;  
+padding: 0;
+}
+  footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+width: 100%; /* Add this line */
+box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
+}
+
+.footer-content {
+max-width: 960px;
+margin: 0 auto;
+}
+
+.footer-links {
+list-style: none;
+padding: 0;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.footer-links a {
+color: #fff;
+text-decoration: none;
+}
+
+@media (max-width: 768px) {
+.footer-links {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+}

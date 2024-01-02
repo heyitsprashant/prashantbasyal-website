@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .project-card {
+    display: flex;
+    height: 200px; /* Set a fixed height or adjust as needed */
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-right: 20px; /* Add a margin to the right side */
+    margin-left: 20px; /* Add a margin to the left side */
+  }
+  
+  .half {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transitions for transform and opacity */
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+  }
+  
+  .left {
+    background-color: #f0f0f0;
+  }
+  
+  .right {
+    background-color: #e0e0f0;
+  }
+  
+  .left:hover {
+    transform: scale(1.1); /* Pop effect for the left half on hover */
+  }
+  
+  .right:hover {
+    transform: scale(1.1); /* Pop effect for the right half on hover */
+  }
+
+  .background-image {
+    background-image: url('path-to-your-image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the background image */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
+  .project-image {
+    width: fit-content; /* Full width */
+    height: auto; /* Full height */
+    object-fit: cover; /* Resize the image to cover the entire container */
+  }
