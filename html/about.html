@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/viewmore.css">
+  <link rel="stylesheet" href="css/newnavbar.css">
+<title>about</title>
+</head>
+  <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+      
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quote {
+            max-width: 600px;
+        }
+
+        .kinetic-text {
+            font-size: 2em; /* Adjust font size as needed */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        .myimage {
+            flex-grow: 1;
+            text-align: right;
+            max-width: 40%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .section {
+            margin-top: 20px; /* Adjust the margin as needed */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .section-left {
+            max-width: 40%;
+        }
+
+        .section-right {
+            max-width: 55%;
+        }
+        .nav-icon {
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+}
+
+/* CSS for larger devices */
+.nav-icon {
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS for smaller devices */
+@media screen and (max-width: 768px) {
+  .nav-icon {
+    width: 30px; /* Smaller size for smaller devices */
+    height: 30px; /* Smaller size for smaller devices */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of elements */
+  }
+}
+/* CSS for larger devices */
+.kinetic-text {
+  font-size: 2em; /* Set a fixed font size */
+}
+
+/* CSS for smaller devices */
+@media screen and (max-width: 600px) {
+  .kinetic-text {
+    font-size: 1em; /* Smaller size for smaller devices */
+  }
+}
+        /* CSS for larger devices */
+.nav-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.kinetic-text {
+  font-size: 2em;
+}
+
+
+
+/* CSS for smaller devices */
+@media screen and (max-width: 768px) {
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .kinetic-text {
+    font-size: 1em;
+  }
+
+  /* Add styles for other elements as needed */
+  .project-card {
+    width: 100%; /* Make the project cards full width */
+  }
+
+  .first-section {
+    margin-top: 10px; /* Reduce the top margin of the first section */
+  }
+}
+/* CSS for larger devices */
+.content {
+  display: flex;
+  flex-direction: column; /* Text and image side by side */
+}
+
+.project-image {
+  width: 40%; /* Set a fixed width */
+}
+
+/* CSS for smaller devices */
+@media screen and (max-width: 600px) {
+  
+
+  .project-image {
+    width: 100%; /* Image takes full width */
+  }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .section-left,
+    .section-right {
+        flex-basis: 100%; /* Full width for smaller screens */
+    }
+}
+
+    </style>
+   
+</head>
+<body>
+
+    
+      <nav>
+        <div id="logo" onclick="navigateToHome()">PB</div>
+        <div id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="links">
+          <a href="home.html"  id="about">Home</a>
+    <a href="about.html" id="about" onclick="navigateToAbout()">About</a>
+    
+   
+    <a href="works.html" id="about">Projects</a>
+    <a href="arts.html" id="about">arts</a>
+    <a href="writes.html" id="about">Writing</a>
+    
+        </div>
+        <div id="dark-mode-toggle" onclick="toggleDarkMode()">
+          <img id="darkModeIcon" src="lightmode.png" alt="Toggle Dark Mode">
+          <div id="overlay"></div>
+        </div>
+        </nav>
+    <script src="js/hamburger.js"></script>
+    <script src="js/transitionalforpage.js"></script>
+  
+
+    <div class="container">
+        <div class="content">
+            <div class="text">
+              <h1 class="kinetic-text">Your Kinetic Quote Goes Here</h1>
+            </div>
+            <div class="image">
+              <img src="assets/prashant.jpg" alt="Prashant" class="project-image">
+            </div>
+          </div>
+
+
+        <div class="section">
+            <div class="section-left">
+                <h2>About</h2>
+                <p>Your about content goes here...</p>
+            </div>
+            <div class="section-right">
+                <h2>Story Uses</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-left">
+                <h2>Section 1</h2>
+                <p>Section 1 content goes here...</p>
+            </div>
+            <div class="section-right">
+                <h2>Section 2</h2>
+                <p>Section 2 content goes here...</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-left">
+                <h2>Section 3</h2>
+                <p>Section 3 content goes here...</p>
+            </div>
+            <div class="section-right">
+                <h2>Section 4</h2>
+                <p>Section 4 content goes here...</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-left">
+                <h2>Section 5</h2>
+                <p>Section 5 content goes here...</p>
+            </div>
+            <div class="section-right">
+                <h2>Section 6</h2>
+                <p>Section 6 content goes here...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="motivation">
+            <p>Stay motivated and keep coding!</p>
+        </div>
+        <div id="contact-links">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <!-- GitHub -->
+            <a href="https://github.com/" target="_blank" class="github"><i class="fab fa-github"></i></a>
+            <!-- Add more contact links as needed -->
+        </div>
+    </footer>
+    
+
+</body>
+</html>

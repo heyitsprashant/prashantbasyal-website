@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/box.css">
+  <link rel="stylesheet" href="css/viewmore.css">
+  <link rel="stylesheet" href="css/newnavbar.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+           body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Set initial height */
+}
+
+    #banner {
+        background-color: #111;
+        text-align: center;
+        padding: 10vw; /* Use viewport units for padding */
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        animation: twinkle 2s infinite;
+    }
+
+    @keyframes twinkle {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    #animatedText {
+        color: #fff;
+        z-index: 2;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #animatedText h1, #animatedText p {
+        opacity: 0;
+    }
+
+    #details {
+        text-align: center;
+        padding: 20px;
+        z-index: 2;
+    }
+
+
+        /* Different colors for the stars */
+        .star.star1 { background-color: #fff; top: 10%; left: 20%; }
+        .star.star2 { background-color: #ffee58; top: 30%; left: 70%; }
+        .star.star3 { background-color: #f48fb1; top: 50%; left: 40%; }
+        .star.star4 { background-color: #81c784; top: 15%; left: 50%; }
+        .star.star5 { background-color: #9575cd; top: 80%; left: 10%; }
+        .star.star6 { background-color: #f57c00; top: 40%; left: 80%; }
+        .star.star7 { background-color: #4db6ac; top: 60%; left: 25%; }
+        .star.star8 { background-color: #f44336; top: 5%; left: 90%; }
+        .star.star9 { background-color: #2196f3; top: 70%; left: 60%; }
+        .star.star10 { background-color: #fdd835; top: 25%; left: 15%; }
+        .star.star11 { background-color: #8d6e63; top: 55%; left: 30%; }
+        .star.star12 { background-color: #aed581; top: 75%; left: 45%; }
+        .star.star13 { background-color: #673ab7; top: 35%; left: 85%; }
+        .star.star14 { background-color: #ff9800; top: 65%; left: 55%; }
+        .star.star15 { background-color: #66bb6a; top: 20%; left: 75%; }
+        .star.star16 { background-color: #e91e63; top: 45%; left: 5%; }
+        .star.star17 { background-color: #4caf50; top: 85%; left: 35%; }
+        .star.star18 { background-color: #2196f3; top: 10%; left: 65%; }
+        .star.star19 { background-color: #ffeb3b; top: 50%; left: 90%; }
+        .star.star20 { background-color: #795548; top: 30%; left: 15%; }
+        .star.star21 { background-color: #9c27b0; top: 60%; left: 80%; }
+        .star.star22 { background-color: #00bcd4; top: 15%; left: 35%; }
+        .star.star23 { background-color: #cddc39; top: 80%; left: 50%; }
+        .star.star24 { background-color: #607d8b; top: 40%; left: 20%; }
+        .star.star25 { background-color: #ff5722; top: 5%; left: 75%; }
+        .star.star26 { background-color: #3f51b5; top: 70%; left: 10%; }
+        .star.star27 { background-color: #009688; top: 25%; left: 45%; }
+        .star.star28 { background-color: #e57373; top: 45%; left: 90%; }
+        .star.star29 { background-color: #8bc34a; top: 75%; left: 30%; }
+        .star.star30 { background-color: #ffeb3b; top: 35%; left: 65%; }
+        .star.star31 { background-color: #673ab7; top: 15%; left: 85%; }
+        .star.star32 { background-color: #ff9800; top: 55%; left: 55%; }
+        .star.star33 { background-color: #66bb6a; top: 20%; left: 75%; }
+        .star.star34 { background-color: #e91e63; top: 45%; left: 5%; }
+        .star.star35 { background-color: #4caf50; top: 85%; left: 35%; }
+        .star.star36 { background-color: #2196f3; top: 10%; left: 65%; }
+        .star.star37 { background-color: #ffeb3b; top: 50%; left: 90%; }
+        .star.star38 { background-color: #795548; top: 30%; left: 15%; }
+        .star.star39 { background-color: #9c27b0; top: 60%; left: 80%; }
+        
+        
+        .kinetic-typography {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        @media (max-width: 768px) {
+        #banner {
+            padding: 20px; /* Adjust padding for smaller screens */
+        }
+
+        #animatedText h1, #animatedText p {
+            font-size: 18px; /* Adjust font size for smaller screens */
+        }
+    }
+    </style>
+    <title>Your Website</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div id="logo" onclick="navigateToHome()">PB</div>
+        <div id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="links">
+          <a href="home.html"  id="about">Home</a>
+    <a href="about.html" id="about" onclick="navigateToAbout()">About</a>
+    
+   
+    <a href="works.html" id="about">Projects</a>
+    <a href="arts.html" id="about">arts</a>
+    <a href="writes.html" id="about">Writing</a>
+    
+        </div>
+        <div id="dark-mode-toggle" onclick="toggleDarkMode()">
+          <img id="darkModeIcon" src="lightmode.png" alt="Toggle Dark Mode">
+          <div id="overlay"></div>
+        </div>
+        </nav>
+        <script src="js/hamburger.js"></script>
+        <script src="js/transitionalforpage.js"></script>
+
+    <!-- Banner Section -->
+    <div id="banner">
+        <div id="animatedText">
+            <h1>My Projects</h1>
+            <p>Explore the exciting projects I've been working on.</p>
+        </div>
+        
+        <!-- Stars -->
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+        <div class="star star6"></div>
+        <div class="star star7"></div>
+        <div class="star star8"></div>
+        <div class="star star9"></div>
+        <div class="star star10"></div>
+        <div class="star star11"></div>
+        <div class="star star12"></div>
+        <div class="star star13"></div>
+        <div class="star star14"></div>
+        <div class="star star15"></div>
+        <div class="star star16"></div>
+        <div class="star star17"></div>
+        <div class="star star18"></div>
+        <div class="star star19"></div>
+        <div class="star star20"></div>
+        <div class="star star21"></div>
+        <div class="star star22"></div>
+        <div class="star star23"></div>
+        <div class="star star24"></div>
+        <div class="star star25"></div>
+        <div class="star star26"></div>
+        <div class="star star27"></div>
+        <div class="star star28"></div>
+        <div class="star star29"></div>
+        <div class="star star30"></div>
+        <div class="star star31"></div>
+        <div class="star star32"></div>
+        <div class="star star33"></div>
+        <div class="star star34"></div>
+        <div class="star star35"></div>
+        <div class="star star36"></div>
+        <div class="star star37"></div>
+        <div class="star star38"></div>
+        <div class="star star39"></div>
+    </div>
+
+    <!-- Details Section -->
+    <div id="details">
+        <!-- Your details (text, images, etc.) go here -->
+    </div>
+
+    <script>
+    
+        // Use anime.js for kinetic typography animation
+       anime.timeline({ loop: false })
+            .add({
+                targets: '#animatedText h1',
+                translateX: [-500, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1500
+            })
+            .add({
+                targets: '#animatedText p',
+                translateX: [-500, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1500
+            });
+    </script>
+
+
+<div class="container">
+  <div class="info-box">
+    <img src="your-image-url-1.jpg" alt="Image 1">
+    <h2>Container 1</h2>
+    <p>Information goes here...</p>
+  </div>
+
+  <div class="info-box">
+    <img src="your-image-url-2.jpg" alt="Image 2">
+    <h2>Container 2</h2>
+    <p>Information goes here...</p>
+  </div>
+
+  <div class="info-box">
+    <img src="assets/cute-boy-12951184.jpg" alt="Image 3">
+    <h2>Container 3</h2>
+    <p>Information goes here...</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="info-box">
+    <img src="your-image-url-1.jpg" alt="Image 1">
+    <h2>Container 1</h2>
+    <p>Information goes here... <a href="#" class="read-more-btn">Read More</a></p>
+  </div>
+
+  <div class="info-box">
+    <img src="your-image-url-2.jpg" alt="Image 2">
+    <h2>Container 2</h2>
+    <p>Information goes here... <a href="#" class="read-more-btn">Read More</a></p>
+  </div>
+
+  <div class="info-box">
+    <img src="assets/cute-boy-12951184.jpg" alt="Image 3">
+    <h2>Container 3</h2>
+    <p>Information goes here... <a href="#" class="read-more-btn">Read More</a></p>
+  </div>
+</div>
+  <br><br>
+
+
+
+<footer>
+  <div id="motivation">
+      <p>Stay motivated and keep coding!</p>
+  </div>
+  <div id="contact-links">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <!-- GitHub -->
+      <a href="https://github.com/" target="_blank" class="github"><i class="fab fa-github"></i></a>
+      <!-- Add more contact links as needed -->
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>

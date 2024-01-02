@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Loading Page</title>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loading-circle" style="--animation-delay: 0s;"></div>
+    <div class="loading-circle" style="--animation-delay: 0.2s;"></div>
+    <div class="loading-circle" style="--animation-delay: 0.4s;"></div>
+    <div class="loading-circle" style="--animation-delay: 0.6s;"></div>
+    <div class="loading-circle" style="--animation-delay: 0.8s;"></div>
+  </div>
+  <div class="content">
+    <!-- Your website content goes here -->
+    <h1 id="name">Prashant Basyal</h1>
+    <script>
+      window.onload = function() {
+        setTimeout(() => {
+          document.querySelector('.loading-container').style.display = 'none';
+      
+          const name = 'Prashant Basyal';
+          const scrambled = name.split('').sort(() => 0.5 - Math.random()).join('');
+          document.getElementById('name').textContent = scrambled;
+      
+          setTimeout(() => {
+            document.getElementById('name').textContent = name;
+          }, 900);
+        }, 900);
+      }
+      </script>
+  </div>
+  <meta http-equiv="refresh" content="0.9;url=home.html">
+</body>
+</html>
